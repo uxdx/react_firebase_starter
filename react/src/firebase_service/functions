@@ -1,0 +1,12 @@
+import { getFunctions, httpsCallable } from "firebase/functions";
+import { app } from "./firebase";
+
+const functions = getFunctions(app);
+
+/**
+ * Example of use firebase function
+ */
+export const sampleFunction = await httpsCallable<any, any>(
+  functions,
+  "FUNCTION_NAME"
+);
